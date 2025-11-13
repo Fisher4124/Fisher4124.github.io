@@ -9,5 +9,5 @@
 #   absoluteUrl: true
 #   url: "https://github.com/ghosind/Jekyll-Paper"
 
-- default: menu_about
-  url:   "about"
+# - default: menu_about
+#   url:   "about"
