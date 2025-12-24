@@ -21,12 +21,13 @@
   "mermaid"
 ;
 
-html {
-  font-family: 'En', 'Zh', sans-serif;
+:root {
+  --ant-font-family: 'En', 'Zh', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ant-font-family-code: 'En Mono', monospace;
 }
 
-code, pre {
-  font-family: 'En Mono', 'Zh Mono', monospace;
+em, i {
+  font-style: italic;
 }
 
 .text-center {
