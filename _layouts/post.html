@@ -16,18 +16,25 @@ layout: default
     <div class="post-date">
       {{ site.data.lang[site.language].post_write_date }}{{ page.date | date: "%Y-%m-%d" }}{% if page.last_modified_at %}, {{ site.data.lang[site.language].post_update_date }}{{ page.last_modified_at | date: "%Y-%m-%d" }}{% endif %}.
     </div>
+
+    {% if page.categories and page.categories.size > 0 %}
     <div class="post-categories">
       <span>{{ site.data.lang[site.language].post_categories }}</span>
       {% for category in page.categories %}
       <a href="{{ site.baseurl }}/category/{{ category | slugify }}" class="post-category">{{ category }}</a>
       {% endfor %}
     </div>
+    {% endif %}
+
+    {% if page.tags and page.tags.size > 0 %}
     <div class="post-tags">
       <span>{{ site.data.lang[site.language].post_tags }}</span>
       {% for tag in page.tags %}
       <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
       {% endfor %}
     </div>
+    {% endif %}
+  </div>
     <div class="post-tools">
       {% if page.next %}
       <div>
