@@ -1,21 +1,21 @@
 /* 英文字体 */
 @font-face {
   font-family: 'En';
-  src: url('{{ "/assets/fonts/en.woff2" | relative_url }}') format('woff2');
+  src: url('/assets/fonts/en.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'En';
-  src: url('{{ "/assets/fonts/en-italic.woff2" | relative_url }}') format('woff2');
+  src: url('assets/fonts/en-italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'En Mono';
-  src: url('{{ "/assets/fonts/en-mono.woff2" | relative_url }}') format('woff2');
+  src: url('assets/fonts/en-mono.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
@@ -23,21 +23,21 @@
 /* 中文字体 */
 @font-face {
   font-family: 'Zh';
-  src: url('{{ "/assets/fonts/zh.woff2" | relative_url }}') format('woff2');
+  src: url('/assets/fonts/zh.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Zh';
-  src: url('{{ "/assets/fonts/zh-italic.woff2" | relative_url }}') format('woff2');
+  src: url('assets/fonts/zh-italic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Zh Mono';
-  src: url('{{ "/assets/fonts/zh-mono.woff2" | relative_url }}') format('woff2');
+  src: url('assets/fonts/zh-mono.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
