@@ -41,3 +41,8 @@
   font-weight: 400;
   font-style: normal;
 }
+
+:root {
+  --ant-font-family: 'En', 'Zh', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ant-font-family-code: 'En Mono', 'Zh Mono', monospace;
+}
