@@ -21,15 +21,6 @@
   "mermaid"
 ;
 
-html, body, :root {
-  --ant-font-family: 'En', 'Zh', -apple-system, BlinkMacSystemFont, sans-serif;
-  --ant-font-family-code: 'En Mono', 'Zh Mono', monospace;
-}
-
-.ant-layout, .ant-typography {
-  font-family: var(--ant-font-family) !important;
-}
-
 em, i {
   font-style: italic;
 }
@@ -56,10 +47,6 @@ em, i {
 
 .formula-math {
   display: inline-block;
-}
-
-.center {
-  justify-content: center;
 }
 
 .post-content p {
