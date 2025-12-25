@@ -1,23 +1,26 @@
 /* 英文字体 */
 @font-face {
   font-family: 'En';
-  src: url('/assets/fonts/en.woff2') format('woff2');
+  src: url('/assets/fonts/en.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'En';
-  src: url('/assets/fonts/en-italic.woff2') format('woff2');
+  src: url('/assets/fonts/en-italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'En Mono';
-  src: url('/assets/fonts/en-mono.woff2') format('woff2');
+  src: url('/assets/fonts/en-mono.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 /* 中文字体 */
@@ -26,25 +29,20 @@
   src: url('/assets/fonts/zh.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Zh';
-  src: url('/assets/fonts/zh-italic.woff2') format('woff2');
+  src: url('/assets/fonts/zh-italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
-}
-
-@font-face {
-  font-family: 'Zh Mono';
-  src: url('/assets/fonts/zh-mono.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
+  font-display: swap;
 }
 
 :root, .css-var-rc, body {
   --ant-font-family: 'En', 'Zh', -apple-system, BlinkMacSystemFont, sans-serif !important;
-  --ant-font-family-code: 'En Mono', 'Zh Mono', monospace !important;
+  --ant-font-family-code: 'En Mono', monospace !important;
 }
 
 html, body, .ant-layout {
