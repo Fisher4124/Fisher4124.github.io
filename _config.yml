@@ -13,9 +13,9 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 打鱼船
+title: Fisher
 email: fisher4124@qq.com
-name: Fisher4124
+name: 4124
 description: >- # this means to ignore newlines until "baseurl:"
   Fisher4124
 keywords: [Your keywords]
