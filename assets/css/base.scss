@@ -107,15 +107,24 @@ blockquote strong {
   text-indent: 2em;
 }
 
-/* 靶向修复：消除列表项中因为 Kramdown 误加 <p> 导致的生僻字换行 */
+/* 终极降维打击：直接把包含生僻字的列表项变成弹性单行盒 */
+ul li:has(f-tshyn),
+ol li:has(f-tshyn) {
+  display: flex !important;
+  flex-direction: row !important;   /* 强制所有子元素横向排列 */
+  flex-wrap: wrap !important;       /* 允许正常的主体文本在空间不够时折行 */
+  align-items: baseline !important; /* 确保生僻字和后面的文字基准线对齐，不上下错位 */
+}
+
+/* 顺便把那个多余的 <p> 标签的所有占位间距和换行彻底蒸发 */
 ul li:has(f-tshyn) p,
 ol li:has(f-tshyn) p {
-  display: inline !important;    /* 强行把块级的 <p> 降级为行内显示 */
-  margin: 0 !important;          /* 消除段落自带的上下外边距 */
+  display: inline !important;
+  margin: 0 !important;
   padding: 0 !important;
 }
 
-/* 保持 f-tshyn 干净安全的基本样式即可 */
+/* 保持核心注册样式不变 */
 f-tshyn {
   font-family: 'TH-Tshyn', sans-serif !important;
   font-style: normal;
