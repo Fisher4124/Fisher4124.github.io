@@ -27,10 +27,65 @@ em, i {
 
 f-tshyn {
   font-family: 'TH-Tshyn', sans-serif !important;
+  font-style: normal;
+  
+  /* ==========================================================================
+     核心：彻底解决生僻字后、正常字前出现换行的问题
+     ========================================================================== */
+  display: inline !important;       /* 强制作为普通的行内文字对待，绝不独占一行 */
+  white-space: nowrap !important;   /* 确保自定义标签内部的文字和符号绝不折行 */
+}
+
+/* 在外部加粗，保证也是行内元素 */
+strong f-tshyn, 
+b f-tshyn {
+  display: inline !important;
 }
 
 f-times {
   font-family: 'TH-Times', serif !important;
+}
+
+f-mono {
+  font-family: 'En Mono', Courier New, monospace !important; /* 绑定你注册的名字 */
+  display: inline !important;
+  white-space: nowrap !important;
+}
+
+/* 确保在粗体环境下也能正常显示 */
+strong f-mono,
+f-mono strong {
+  display: inline !important;
+  font-weight: bold !important;
+}
+
+f-italic {
+  /* 显式指定字体族和斜体状态 */
+  font-family: 'Zh', sans-serif !important;
+  font-style: italic !important;
+  display: inline !important;
+}
+
+/* 确保和粗体嵌套时也不会错乱 */
+strong f-italic,
+f-italic strong {
+  display: inline !important;
+  font-style: italic !important;
+  font-weight: bold !important;
+}
+
+/* 让引用块（blockquote）具备弹性盒布局的能力，方便子元素定位 */
+blockquote {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 智能匹配：如果 blockquote 内部的 em（斜体）或者 strong（粗体）是以“—”开头的 */
+blockquote em, 
+blockquote strong {
+  /* 如果文本包含破折号，强制其变为块级并向右对齐 */
+  align-self: flex-end;
+  text-align: right;
 }
 
 .text-center {
