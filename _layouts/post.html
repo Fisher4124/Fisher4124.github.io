@@ -52,3 +52,25 @@ layout: default
     {% endif %}
   </div>
 </article>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // 1. 精准抓取所有包含生僻字标签的列表项
+  const listItems = document.querySelectorAll('li:has(f-tshyn)');
+  
+  listItems.forEach(li => {
+    const pTag = li.querySelector('p');
+    const tshynTag = li.querySelector('f-tshyn');
+    
+    if (pTag && tshynTag) {
+      // 2. 清洗 <p> 标签内部可能存在的隐形换行脏字符
+      // 顺便把内部的 HTML（比如 <em>Charybdis</em>）原封不动拿出来
+      let cleanHtml = pTag.innerHTML.replace(/[\u200B-\u200D\uFEFF\u2060\u2066-\u2069]/g, '');
+      
+      // 3. 彻底把 <p> 标签拆掉，直接把清洗后的文字和生僻字标签并排塞回 <li>
+      // 这样在 DOM 树里它们就是最纯粹的文本节点，没有任何标签能阻止它们并排
+      li.innerHTML = tshynTag.outerHTML + cleanHtml;
+    }
+  });
+});
+</script>
