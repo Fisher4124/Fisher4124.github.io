@@ -28,18 +28,16 @@ em, i {
 f-tshyn {
   font-family: 'TH-Tshyn', sans-serif !important;
   font-style: normal;
-  
-  /* ==========================================================================
-     核心：彻底解决生僻字后、正常字前出现换行的问题
-     ========================================================================== */
-  display: inline !important;       /* 强制作为普通的行内文字对待，绝不独占一行 */
-  white-space: nowrap !important;   /* 确保自定义标签内部的文字和符号绝不折行 */
+
+  display: inline !important;       
+  white-space: nowrap !important;   
+  word-break: keep-all !important;   
 }
 
-/* 在外部加粗，保证也是行内元素 */
 strong f-tshyn, 
 b f-tshyn {
   display: inline !important;
+  white-space: nowrap !important;
 }
 
 f-times {
