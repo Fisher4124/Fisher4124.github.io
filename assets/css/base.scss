@@ -105,12 +105,24 @@ blockquote strong {
   text-indent: 2em;
 }
 
-ul li p, 
-ol li p {
-  display: inline !important;
-  margin: 0 !important;
+/* 终极降维打击：直接把包含生僻字的列表项变成弹性单行盒 */
+ul li:has(f-tshyn),
+ol li:has(f-tshyn) {
+  display: flex !important;
+  flex-direction: row !important;   /* 强制所有子元素横向排列 */
+  flex-wrap: wrap !important;       /* 允许正常的主体文本在空间不够时折行 */
+  align-items: baseline !important; /* 确保生僻字和后面的文字基准线对齐，不上下错位 */
 }
 
+/* 顺便把那个多余的 <p> 标签的所有占位间距和换行彻底蒸发 */
+ul li:has(f-tshyn) p,
+ol li:has(f-tshyn) p {
+  display: inline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 保持核心注册样式不变 */
 f-tshyn {
   font-family: 'TH-Tshyn', sans-serif !important;
   font-style: normal;
