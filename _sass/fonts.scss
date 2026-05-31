@@ -40,6 +40,48 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'TH-Tshyn';
+  src: url('/assets/fonts/TH-Tshyn-P0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TH-Tshyn';
+  src: url('/assets/fonts/TH-Tshyn-P1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TH-Tshyn';
+  src: url('/assets/fonts/TH-Tshyn-P2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TH-Tshyn';
+  src: url('/assets/fonts/TH-Tshyn-P16.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TH-Times';
+  /* 现代浏览器支持直接通过 format("ttc") 引用 .ttc 文件中的默认首选字体 */
+  src: url('/assets/fonts/TH-Times.ttc') format('collection'),
+       url('/assets/fonts/TH-Times.ttc') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root, .css-var-rc, body {
   --ant-font-family: 'En', 'Zh', -apple-system, BlinkMacSystemFont, sans-serif !important;
   --ant-font-family-code: 'En Mono', monospace !important;
@@ -47,4 +89,12 @@
 
 html, body, .ant-layout {
   font-family: var(--ant-font-family) !important;
+}
+
+f-tshyn {
+  font-family: 'TH-Tshyn', sans-serif !important;
+}
+
+f-times {
+  font-family: 'TH-Times', serif !important;
 }
