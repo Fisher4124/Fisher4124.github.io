@@ -27,12 +27,6 @@ em, i {
 
 f-tshyn {
   font-family: 'TH-Tshyn', sans-serif !important;
-  font-style: normal;
-  display: inline !important;
-
-  text-rendering: optimizeLegibility !important; 
-  -webkit-font-smoothing: antialiased !important;  
-  -moz-osx-font-smoothing: grayscale !important;
 }
 
 f-times {
@@ -69,10 +63,8 @@ blockquote {
   flex-direction: column;
 }
 
-/* 智能匹配：如果 blockquote 内部的 em（斜体）或者 strong（粗体）是以“—”开头的 */
 blockquote em, 
 blockquote strong {
-  /* 如果文本包含破折号，强制其变为块级并向右对齐 */
   align-self: flex-end;
   text-align: right;
 }
@@ -87,7 +79,7 @@ blockquote strong {
 
 .formula-inline {
   display: inline-flex;
-  align-items: center; /* 垂直居中 */
+  align-items: center;
   gap: 1em;
 }
 

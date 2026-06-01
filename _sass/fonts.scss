@@ -105,7 +105,6 @@ f-mono {
   white-space: nowrap !important;
 }
 
-/* 确保在粗体环境下也能正常显示 */
 strong f-mono,
 f-mono strong {
   display: inline !important;
@@ -113,13 +112,11 @@ f-mono strong {
 }
 
 f-italic {
-  /* 显式指定字体族和斜体状态 */
   font-family: 'Zh', sans-serif !important;
   font-style: italic !important;
   display: inline !important;
 }
 
-/* 确保和粗体嵌套时也不会错乱 */
 strong f-italic,
 f-italic strong {
   display: inline !important;
