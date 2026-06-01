@@ -29,6 +29,10 @@ f-tshyn {
   font-family: 'TH-Tshyn', sans-serif !important;
   font-style: normal;
   display: inline !important;
+
+  text-rendering: optimizeLegibility !important; 
+  -webkit-font-smoothing: antialiased !important;  
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 f-times {
@@ -36,12 +40,11 @@ f-times {
 }
 
 f-mono {
-  font-family: 'En Mono', Courier New, monospace !important; /* 绑定你注册的名字 */
+  font-family: 'En Mono', Courier New, monospace !important; 
   display: inline !important;
   white-space: nowrap !important;
 }
 
-/* 确保在粗体环境下也能正常显示 */
 strong f-mono,
 f-mono strong {
   display: inline !important;
@@ -49,13 +52,11 @@ f-mono strong {
 }
 
 f-italic {
-  /* 显式指定字体族和斜体状态 */
   font-family: 'Zh', sans-serif !important;
   font-style: italic !important;
   display: inline !important;
 }
 
-/* 确保和粗体嵌套时也不会错乱 */
 strong f-italic,
 f-italic strong {
   display: inline !important;
@@ -63,7 +64,6 @@ f-italic strong {
   font-weight: bold !important;
 }
 
-/* 让引用块（blockquote）具备弹性盒布局的能力，方便子元素定位 */
 blockquote {
   display: flex;
   flex-direction: column;
@@ -103,28 +103,4 @@ blockquote strong {
 
 .post-content p {
   text-indent: 2em;
-}
-
-/* 终极降维打击：直接把包含生僻字的列表项变成弹性单行盒 */
-ul li:has(f-tshyn),
-ol li:has(f-tshyn) {
-  display: flex !important;
-  flex-direction: row !important;   /* 强制所有子元素横向排列 */
-  flex-wrap: wrap !important;       /* 允许正常的主体文本在空间不够时折行 */
-  align-items: baseline !important; /* 确保生僻字和后面的文字基准线对齐，不上下错位 */
-}
-
-/* 顺便把那个多余的 <p> 标签的所有占位间距和换行彻底蒸发 */
-ul li:has(f-tshyn) p,
-ol li:has(f-tshyn) p {
-  display: inline !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* 保持核心注册样式不变 */
-f-tshyn {
-  font-family: 'TH-Tshyn', sans-serif !important;
-  font-style: normal;
-  display: inline !important;
 }
