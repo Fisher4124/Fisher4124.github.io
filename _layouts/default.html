@@ -10,6 +10,35 @@
     pangu.element_spacing('.post-content'); 
   });
 </script>
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    
+    toggleButton.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      let newTheme = 'light';
+      
+      if (currentTheme === 'light') {
+        newTheme = 'dark';
+        toggleButton.innerHTML = '☀️';
+      } else {
+        newTheme = 'light';
+        toggleButton.innerHTML = '🌙';
+      }
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggleButton = document.getElementById('theme-toggle');
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      if (currentTheme === 'dark' && toggleButton) {
+        toggleButton.innerHTML = '☀️';
+      }
+    });
+  </script>
+</body>
+</html>
 <body>
   <div class="container-wrapper">
     <header class="container-header">
