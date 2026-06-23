@@ -3,6 +3,13 @@
 <head>
   {% include head.html %}
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.element_spacing('.post-content'); 
+  });
+</script>
 <body>
   <div class="container-wrapper">
     <header class="container-header">
