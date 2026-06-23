@@ -72,7 +72,8 @@ blockquote strong {
 .vovs {
     -webkit-text-emphasis: dot;
     text-emphasis: dot;
-    text-underline-position: under; 
+    -webkit-text-emphasis-position: under right;
+    text-emphasis-position: under right;
 }
 
 .text-center {
