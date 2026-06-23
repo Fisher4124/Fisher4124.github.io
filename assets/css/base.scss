@@ -133,3 +133,21 @@ blockquote strong {
 .post-content p {
   text-indent: 2em;
 }
+
+ul li, 
+ol li, 
+p {
+  line-height: 1.75 !important; 
+
+  letter-spacing: 0.03em !important;
+}
+
+p {
+  margin-top: 0 !important;
+  margin-bottom: 1.2rem !important; 
+}
+
+ul li, 
+ol li {
+  margin-bottom: 0.6rem !important; 
+}
