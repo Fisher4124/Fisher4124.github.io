@@ -1,6 +1,32 @@
 <button id="theme-toggle" aria-label="Toggle theme" style="cursor: pointer; background: none; border: none; font-size: 1.2rem;">
   🌙
 </button>
+
+<script>
+  (function() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'dark') {
+      btn.innerHTML = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const theme = document.documentElement.getAttribute('data-theme');
+      let newTheme = 'light';
+      
+      if (theme === 'light') {
+        newTheme = 'dark';
+        btn.innerHTML = '☀️';
+      } else {
+        newTheme = 'light';
+        btn.innerHTML = '🌙';
+      }
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  })();
+</script>
 <div class="header-info">
   <span class="header-info-name">{{ site.title }}</span>
   <span class="header-info-desc">{{ site.description }}</span>
