@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'En';
   src: url('/assets/fonts/en.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -10,7 +10,7 @@
 @font-face {
   font-family: 'En';
   src: url('/assets/fonts/en-italic.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
@@ -18,7 +18,7 @@
 @font-face {
   font-family: 'En Mono';
   src: url('/assets/fonts/en-mono.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -27,7 +27,7 @@
 @font-face {
   font-family: 'Zh';
   src: url('/assets/fonts/zh.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -35,7 +35,7 @@
 @font-face {
   font-family: 'Zh';
   src: url('/assets/fonts/zh-italic.ttf') format('truetype');
-  font-weight: 400;
+  font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
@@ -45,6 +45,14 @@
   src: url('/assets/fonts/zh-bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zh';
+  src: url('/assets/fonts/zh-italic-bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
   font-display: swap;
 }
 
