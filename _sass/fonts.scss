@@ -1,7 +1,7 @@
 /* 英文字体 */
 @font-face {
   font-family: 'En';
-  src: url('/assets/fonts/en.ttf') format('truetype');
+  src: url('/assets/fonts/en.ttf') format('truetype'); /* CMU_Serif */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'En';
-  src: url('/assets/fonts/en-italic.ttf') format('truetype');
+  src: url('/assets/fonts/en-italic.ttf') format('truetype'); /* CMU_Serif */
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'En Mono';
-  src: url('/assets/fonts/en-mono.ttf') format('truetype');
+  src: url('/assets/fonts/en-mono.ttf') format('truetype'); /* Fira_Code */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -26,7 +26,7 @@
 /* 中文字体 */
 @font-face {
   font-family: 'Zh';
-  src: url('/assets/fonts/zh.ttf') format('truetype');
+  src: url('/assets/fonts/zh.ttf') format('truetype'); /* 霞鹜新致宋_屏幕阅读版 */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: 'Zh';
-  src: url('/assets/fonts/zh-italic.ttf') format('truetype');
+  src: url('/assets/fonts/zh-italic.ttf') format('truetype'); /* 朱雀仿宋 */
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -42,7 +42,7 @@
 
 @font-face {
   font-family: 'Zh';
-  src: url('/assets/fonts/zh-bold.woff2') format('woff2');
+  src: url('/assets/fonts/zh-bold.woff2') format('woff2'); /* MiSans_Semibold */
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -82,7 +82,6 @@
 
 @font-face {
   font-family: 'TH-Times';
-  /* 现代浏览器支持直接通过 format("ttc") 引用 .ttc 文件中的默认首选字体 */
   src: url('/assets/fonts/TH-Times.ttc') format('collection'),
        url('/assets/fonts/TH-Times.ttc') format('truetype'); 
   font-weight: normal;
@@ -108,7 +107,7 @@ f-times {
 }
 
 f-mono {
-  font-family: 'En Mono', Courier New, monospace !important; /* 绑定你注册的名字 */
+  font-family: 'En Mono', Courier New, monospace !important;
   display: inline !important;
   white-space: nowrap !important;
 }
