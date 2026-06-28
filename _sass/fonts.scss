@@ -16,6 +16,14 @@
 }
 
 @font-face {
+  font-family: 'En';
+  src: url('/assets/fonts/en-bold.ttf') format('truetype'); /* CMU_Serif */
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'En Mono';
   src: url('/assets/fonts/en-mono.ttf') format('truetype'); /* Fira_Code */
   font-weight: normal;
