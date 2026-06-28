@@ -1,7 +1,7 @@
 /* 英文字体 */
 @font-face {
   font-family: 'En';
-  src: url('/assets/fonts/en.ttf') format('truetype'); /* CMU_Serif */
+  src: url('/assets/fonts/en.ttf') format('truetype'); /* Computer-Modern-Unicode_Serif */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'En';
-  src: url('/assets/fonts/en-italic.ttf') format('truetype'); /* CMU_Serif */
+  src: url('/assets/fonts/en-italic.ttf') format('truetype'); /* Computer-Modern-Unicode_Serif */
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'En';
-  src: url('/assets/fonts/en-bold.ttf') format('truetype'); /* CMU_Serif */
+  src: url('/assets/fonts/en-bold.ttf') format('truetype'); /* Computer-Modern-Unicode_Serif */
   font-weight: bold;
   font-style: normal;
   font-display: swap;
