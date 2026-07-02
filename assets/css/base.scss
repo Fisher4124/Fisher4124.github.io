@@ -135,8 +135,17 @@ blockquote strong {
 }
 
 .civiksge {
-    text-indent: 70%;
-    margin: 0;
+    display: block !important;
+    margin-left: 70% !important;
+    text-indent: 0 !important;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.jylijnzo {
+    text-indent: 0 !important;
+    margin-left: 0 !important;
+    text-align: left !important;
 }
 
 h3, h4, h5, h6 {
